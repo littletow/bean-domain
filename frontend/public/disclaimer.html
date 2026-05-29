@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免责声明 - 豆子工具</title>
+    <!-- 移除了 CDN 脚本，改用内联自定义 CSS -->
+    <style>
+        /* 基础变量与复位 */
+        :root {
+            --bg-color: #fdfcf0;
+            --card-bg: #ffffff;
+            --primary: #facc15;
+            /* yellow-400 */
+            --text-main: #334155;
+            /* slate-600 */
+            --text-dark: #0f172a;
+            /* slate-900 */
+            --text-light: #94a3b8;
+            /* slate-400 */
+            --border-color: #ffedd5;
+            /* orange-100 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            padding: 24px;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* 响应式间距 */
+        @media (min-width: 768px) {
+            body {
+                padding: 48px;
+            }
+        }
+
+        /* 容器卡片 */
+        .container {
+            max-width: 48rem;
+            /* max-w-3xl */
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border-radius: 32px;
+            padding: 32px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 48px;
+            }
+        }
+
+        /* 头部设计 */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-box {
+            display: inline-flex;
+            width: 48px;
+            height: 48px;
+            background-color: var(--primary);
+            border-radius: 16px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            box-shadow: 0 10px 15px -3px rgba(250, 204, 21, 0.3);
+        }
+
+        .logo-text {
+            color: white;
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .update-date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-top: 8px;
+        }
+
+        /* 正文内容区 */
+        .content-box {
+            font-size: 0.95rem;
+        }
+
+        .content-box .intro {
+            font-weight: bold;
+            color: #1e293b;
+            font-style: italic;
+        }
+
+        .content-box h2 {
+            color: var(--text-dark);
+            margin: 2rem 0 1rem 0;
+            font-weight: 700;
+            font-size: 1.25rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        .content-box p {
+            margin-bottom: 1rem;
+        }
+
+        .content-box ul {
+            margin-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-box li {
+            margin-bottom: 0.25rem;
+            list-style-type: disc;
+        }
+
+        .content-box strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* 底部 */
+        footer {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #fff7ed;
+            text-align: center;
+        }
+
+        .footer-tag {
+            color: #cbd5e1;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <div class="logo-box">
+                <span class="logo-text">B</span>
+            </div>
+            <h1>免责声明</h1>
+            <p class="update-date">最后更新日期：2026年1月10日</p>
+        </header>
+
+        <!-- 正文内容 -->
+        <div class="content-box">
+            <p class="intro">在您开始使用“豆子工具”系列软件（包括但不限于“豆子域名管家”等桌面客户端及网页端服务）之前，请务必仔细阅读并理解本声明。</p>
+
+            <h2>1. 工具性质说明</h2>
+            <p>“豆子工具”系列是由个人开发者研发的辅助性技术工具。本工具仅供用户提升办公与运维效率使用。开发者不保证工具在所有操作系统环境或特定硬件配置下的绝对稳定性及兼容性。</p>
+
+            <h2>2. 数据的准确性与有效性</h2>
+            <p>对于域名到期提醒、SSL证书检测等监控功能，受限于网络环境、第三方WHOIS服务器接口限制及系统休眠等因素，检测结果可能存在延迟或误差。<strong>本工具仅作为辅助参考，不应作为判断业务安全性的唯一依据。</strong>
+            </p>
+
+            <h2>3. 损害赔偿责任豁免</h2>
+            <p>用户因下列原因导致业务中断、数据丢失或经济损失的，开发者不承担任何直接或间接的法律责任：</p>
+            <ul>
+                <li>因用户未及时查收告警通知或自行关闭软件运行导致的过期风险。</li>
+                <li>因第三方接口（如微信小程序、Webhook 机器人）调整导致的通知失败。</li>
+                <li>因用户违反相关法律法规使用本工具导致的任何后果。</li>
+                <li>不可抗力因素造成的服务中断或本地数据损坏。</li>
+            </ul>
+
+            <h2>4. 隐私及第三方链接</h2>
+            <p>本工具坚持“本地化”运行原则。本网站或工具内可能包含第三方服务链接（如云厂商推广、小程序广告等）。此类第三方服务拥有独立的隐私条款和运营规范，用户在使用此类服务时应自行评估风险。</p>
+
+            <h2>5. 最终解释权</h2>
+            <p>开发者保留随时修改本声明条款的权利。修改后的条款一旦在网页公布即有效。继续使用本工具即视为您已接受修订后的声明。</p>
+        </div>
+
+        <!-- 底部标识 -->
+        <footer>
+            <p class="footer-tag">Bean Tools Legal Document</p>
+        </footer>
+    </div>
+</body>
+
+</html>

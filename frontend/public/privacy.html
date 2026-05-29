@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - 豆子工具</title>
+    <style>
+        /* 基础变量 */
+        :root {
+            --bg-color: #fdfcf0;
+            --card-bg: #ffffff;
+            --primary-emerald: #10b981;
+            /* emerald-500 */
+            --primary-light: #ecfdf5;
+            /* emerald-50 */
+            --text-main: #334155;
+            /* slate-600 */
+            --text-dark: #0f172a;
+            /* slate-900 */
+            --text-light: #94a3b8;
+            /* slate-400 */
+            --border-emerald: #d1fae5;
+            /* emerald-100 */
+            --highlight-text: #059669;
+            /* emerald-600 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 24px;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 48px;
+            }
+        }
+
+        /* 容器卡片 */
+        .container {
+            max-width: 48rem;
+            /* max-w-3xl */
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border-radius: 32px;
+            padding: 32px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-emerald);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 48px;
+            }
+        }
+
+        /* 头部设计 */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-box {
+            display: inline-flex;
+            width: 48px;
+            height: 48px;
+            background-color: var(--primary-emerald);
+            border-radius: 16px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
+        }
+
+        .logo-text {
+            color: white;
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .update-date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-top: 8px;
+        }
+
+        /* 正文排版 */
+        .content-box {
+            font-size: 0.95rem;
+        }
+
+        .content-box .intro {
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-box h2 {
+            color: var(--text-dark);
+            margin: 2rem 0 1rem 0;
+            font-weight: 700;
+            font-size: 1.25rem;
+            border-left: 4px solid var(--primary-emerald);
+            padding-left: 1rem;
+        }
+
+        .content-box p {
+            margin-bottom: 1rem;
+        }
+
+        .content-box ul {
+            margin-left: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-box li {
+            margin-bottom: 0.5rem;
+            list-style-type: disc;
+        }
+
+        .content-box strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* 高亮文本块 */
+        .highlight {
+            color: var(--highlight-text);
+            font-weight: 600;
+            background-color: var(--primary-light);
+            padding: 2px 6px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* 底部标识 */
+        footer {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #f0fdf4;
+            text-align: center;
+        }
+
+        .footer-tag {
+            color: #cbd5e1;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <div class="logo-box">
+                <span class="logo-text">P</span>
+            </div>
+            <h1>隐私政策</h1>
+            <p class="update-date">最后更新日期：2026年1月10日</p>
+        </header>
+
+        <!-- 正文内容 -->
+        <div class="content-box">
+            <p class="intro">“豆子工具”系列深知隐私对您的重要性。本政策详细说明了我们在为您提供工具服务时如何处理您的个人信息和业务数据。</p>
+
+            <h2>1. 数据处理原则</h2>
+            <p>我们坚持 <span class="highlight">本地化优先</span> 原则。我们认为，您的业务数据（如域名列表、WebHook配置）属于您的私有资产，不应被上传至任何非您控制的服务器。</p>
+
+            <h2>2. 业务数据收集情况</h2>
+            <p>对于“豆子域名管家”等桌面客户端：</p>
+            <ul>
+                <li><strong>监控配置</strong>：您输入的域名、端口、备注信息均 <span class="highlight">仅存储于您的本地设备</span>。</li>
+                <li><strong>告警信息</strong>：您的 Webhook 地址（钉钉/企微等）仅在您本地加密保存。告警推送由您的电脑直接发往Webhook平台服务器，<span
+                        class="highlight">不经过开发者服务器</span>。</li>
+                <li><strong>运行日志</strong>：生成的检测日志仅保留在本地用于查错，开发者无法远程获取。</li>
+            </ul>
+
+            <h2>3. 变现模块与身份验证</h2>
+            <p>为了维持项目开发，本工具可能集成的“豆子能量”验证系统：</p>
+            <ul>
+                <li><strong>小程序验证</strong>：当您在小程序内领取支持码时，微信会向开发者提供去标识化的 OpenID（无法识别您的真实身份）。</li>
+                <li><strong>支持码核销</strong>：客户端在验证支持码时，仅发送支持码本身以确认时效性，<span class="highlight">绝不附带任何您的业务监控数据</span>。</li>
+            </ul>
+
+            <h2>4. 第三方服务</h2>
+            <p>本工具集成的第三方接口（如微信激励视频广告、钉钉机器人 API）由相关服务商提供。在使用此类服务时，相关方可能会根据其隐私政策收集必要的设备信息，请您知悉。</p>
+
+            <h2>5. 信息安全保障</h2>
+            <p>我们对本地配置文件进行加密处理，以防止其他本地恶意软件轻易读取。但请注意，保护您计算机系统的安全性是保障本工具数据安全的基础。</p>
+
+            <h2>6. 联系我们</h2>
+            <p>如果您对我们的隐私保护有任何疑问，可以通过“豆子工具”小程序、“技术源泉”公众号或官方网站的联系方式与开发者取得联系。</p>
+        </div>
+
+        <footer>
+            <p class="footer-tag">Privacy Policy for Bean Tools</p>
+        </footer>
+    </div>
+</body>
+
+</html>

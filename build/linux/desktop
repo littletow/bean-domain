@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=豆子域名管家
+Comment=专业的域名到期与 SSL 证书监控工具
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/ %u
+Terminal=false
+Type=Application
+Icon=
+Categories=Utility;
+StartupWMClass=
+
+ 
