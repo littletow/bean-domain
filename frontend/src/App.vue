@@ -306,7 +306,7 @@ onMounted(() => {
                 <!-- ✅ 简化提示 -->
                 <n-alert title="获取新版本" type="info" :bordered="false">
                   本项目为开源软件，最新版本与源码可在 GitHub 获取。<br />
-                  <n-button text type="primary" tag="a" href="https://github.com/littletow/bean-domain/release"
+                  <n-button text type="primary" tag="a" href="https://github.com/littletow/bean-domain/releases"
                     target="_blank" rel="noopener">
                     前往 GitHub 下载最新版 →
                   </n-button>
