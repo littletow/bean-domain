@@ -8,10 +8,11 @@ import (
 	"golang.org/x/sys/windows/registry"
 )
 
+const runKeyPath = `Software\Microsoft\Windows\CurrentVersion\Run`
+const appName = "beandomain" // 进程名称
+
 // SetAutoStart 仅在 Windows 下生效
 func SetAutoStart(enable bool) error {
-	const runKeyPath = `Software\Microsoft\Windows\CurrentVersion\Run`
-	const appName = "sslchecker" // 建议改为你的应用名称
 
 	// 打开当前用户的注册表启动项
 	k, err := registry.OpenKey(registry.CURRENT_USER, runKeyPath, registry.SET_VALUE|registry.QUERY_VALUE)
@@ -39,8 +40,6 @@ func SetAutoStart(enable bool) error {
 
 // IsAutoStartEnabled 检查注册表中是否存在启动项
 func IsAutoStartEnabled() bool {
-	const runKeyPath = `Software\Microsoft\Windows\CurrentVersion\Run`
-	const appName = "sslchecker" // 须与 SetAutoStart 中的名称一致
 
 	// 以只读权限打开注册表
 	k, err := registry.OpenKey(registry.CURRENT_USER, runKeyPath, registry.QUERY_VALUE)
